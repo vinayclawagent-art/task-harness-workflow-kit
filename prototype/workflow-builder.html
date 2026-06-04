@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Task Harness Workflow Builder</title>
+  <style>
+    :root { color-scheme: dark; --bg:#0b1020; --panel:#111936; --panel2:#172143; --text:#edf2ff; --muted:#aab4d4; --accent:#8b5cf6; --accent2:#22d3ee; --border:#2a3765; --good:#34d399; --warn:#fbbf24; }
+    * { box-sizing: border-box; }
+    body { margin:0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: radial-gradient(circle at 20% 0%, rgba(139,92,246,.35), transparent 28%), radial-gradient(circle at 80% 0%, rgba(34,211,238,.22), transparent 24%), var(--bg); color:var(--text); line-height:1.5; }
+    main { max-width: 1100px; margin:0 auto; padding: 28px 18px 50px; }
+    header, section { background: rgba(17,25,54,.94); border:1px solid var(--border); border-radius:22px; padding:22px; margin:18px 0; box-shadow: 0 22px 60px rgba(0,0,0,.28); }
+    h1 { margin:0 0 8px; font-size: clamp(1.9rem, 4vw, 3.2rem); letter-spacing:-.045em; }
+    h2 { margin-top:0; }
+    .meta { color:var(--muted); }
+    .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:14px; }
+    label { display:block; font-weight:700; }
+    input, textarea { width:100%; margin-top:8px; border:1px solid var(--border); background:#090e1f; color:var(--text); border-radius:13px; padding:12px; font:inherit; }
+    textarea { min-height:100px; resize:vertical; }
+    .mini { min-height: 54px; }
+    .step { border:1px solid var(--border); background:var(--panel2); border-radius:16px; padding:14px; }
+    .bar { height:12px; border-radius:999px; background:#090e1f; border:1px solid var(--border); overflow:hidden; }
+    .fill { height:100%; width:0%; background:linear-gradient(90deg, var(--accent), var(--accent2), var(--good)); transition:width .2s ease; }
+    .score { display:flex; justify-content:space-between; gap:10px; margin-top:10px; color:var(--muted); }
+    button { border:0; border-radius:13px; padding:12px 16px; background:linear-gradient(135deg, var(--accent), var(--accent2)); color:#07101f; font-weight:900; cursor:pointer; }
+    button.secondary { background:var(--panel2); color:var(--text); border:1px solid var(--border); }
+    .actions { display:flex; flex-wrap:wrap; gap:10px; }
+    pre { white-space:pre-wrap; background:#090e1f; color:var(--text); border:1px solid var(--border); border-radius:16px; padding:16px; overflow:auto; }
+    a { color:var(--accent2); }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <p class="meta">Source package: Task Harness Workflow Kit · Artifact Factory frequent-improver upgrade</p>
+    <h1>Task Harness Workflow Builder</h1>
+    <p>Convert a recurring agent task into a reusable <code>workflow.md</code> harness before promoting it into a Hermes skill. Fill the form, check harness readiness, then copy the generated markdown.</p>
+    <div class="bar"><div class="fill" id="fill"></div></div>
+    <div class="score"><span id="score">0/8 required fields complete</span><strong id="verdict">Draft</strong></div>
+  </header>
+
+  <section class="grid">
+    <label>Workflow name<input id="name" placeholder="e.g. X Artifact Factory Frequent Improver" /></label>
+    <label>Trigger<input id="trigger" placeholder="When should this workflow run?" /></label>
+    <label>Primary output<input id="output" placeholder="What artifact must exist at the end?" /></label>
+    <label>Verification evidence<input id="evidence" placeholder="Command output, file path, SHA, screenshot, API response..." /></label>
+  </section>
+
+  <section class="grid">
+    <label>Required inputs<textarea id="required" class="mini" placeholder="- Source note\n- Package path\n- Cadence"></textarea></label>
+    <label>Context to load<textarea id="context" class="mini" placeholder="- Related skills\n- Existing package README\n- Prototype files"></textarea></label>
+    <label>Allowed tools<textarea id="tools" class="mini" placeholder="- read_file/search_files/write_file\n- terminal for git/build only"></textarea></label>
+    <label>Pitfalls<textarea id="pitfalls" class="mini" placeholder="- Do not create cron jobs from a cron run\n- Do not claim verification without evidence"></textarea></label>
+  </section>
+
+  <section>
+    <h2>Workflow steps</h2>
+    <div class="grid">
+      <div class="step"><label>1. Gather context<textarea id="step1">Load relevant skills, source notes, package README, loop note, and repo state.</textarea></label></div>
+      <div class="step"><label>2. Produce smallest useful artifact<textarea id="step2">Make one concrete improvement: README tightening, prototype change, infographic spec, or skill draft refinement.</textarea></label></div>
+      <div class="step"><label>3. Verify<textarea id="step3">Read representative generated files and run git status; if a repo mirror exists, commit and push it.</textarea></label></div>
+      <div class="step"><label>4. Decide durability<textarea id="step4">Update the loop next_focus and only promote to an installed skill after real reuse proves the workflow.</textarea></label></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Generated workflow.md</h2>
+    <div class="actions">
+      <button id="copy">Copy workflow.md</button>
+      <button class="secondary" id="reset">Reset saved draft</button>
+    </div>
+    <pre id="markdown"></pre>
+  </section>
+</main>
+<script>
+const ids = ['name','trigger','output','evidence','required','context','tools','pitfalls','step1','step2','step3','step4'];
+const requiredIds = ['name','trigger','output','evidence','required','context','tools','pitfalls'];
+const key = 'task-harness-workflow-builder-v1';
+const $ = id => document.getElementById(id);
+function collect(){ return Object.fromEntries(ids.map(id => [id, $(id).value.trim()])); }
+function render(){
+  const v = collect();
+  const complete = requiredIds.filter(id => v[id]).length;
+  $('fill').style.width = `${complete / requiredIds.length * 100}%`;
+  $('score').textContent = `${complete}/8 required fields complete`;
+  $('verdict').textContent = complete === 8 ? 'Harness ready for trial' : complete >= 5 ? 'Usable draft' : 'Draft';
+  $('markdown').textContent = `# ${v.name || 'workflow.md Template'}\n\n## Trigger\n${v.trigger || '(define when this workflow runs)'}\n\n## Inputs\n### Required\n${v.required || '- '}\n\n## Context to load\n${v.context || '- '}\n\n## Allowed tools\n${v.tools || '- '}\n\n## Steps\n1. ${v.step1 || 'Gather prerequisite context.'}\n2. ${v.step2 || 'Produce the smallest useful artifact.'}\n3. ${v.step3 || 'Verify with real output.'}\n4. ${v.step4 || 'Save/update durable memory only if proved reusable.'}\n\n## Output contract\n- Primary output: ${v.output || '(required artifact)'}\n- Evidence: ${v.evidence || '(required verification evidence)'}\n- Next decision: keep as workflow, refine, or promote to skill after reuse.\n\n## Pitfalls\n${v.pitfalls || '- Do not leave the user with a plan instead of an artifact.\n- Do not promote to a skill until triggers and verification are clear.'}`;
+  localStorage.setItem(key, JSON.stringify(v));
+}
+function load(){
+  try { const v = JSON.parse(localStorage.getItem(key) || '{}'); ids.forEach(id => { if (v[id]) $(id).value = v[id]; }); } catch {}
+  render();
+}
+document.addEventListener('input', render);
+$('copy').addEventListener('click', async () => navigator.clipboard.writeText($('markdown').textContent));
+$('reset').addEventListener('click', () => { localStorage.removeItem(key); ids.forEach(id => $(id).value = ''); load(); });
+load();
+</script>
+</body>
+</html>

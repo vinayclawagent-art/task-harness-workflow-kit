@@ -23,6 +23,7 @@ Claude Code workflows reinforce that repeatable tasks need executable harnesses:
 
 ## Generated artifacts
 - Prototype: [[Task Harness Workflow Kit/workflow-template]]
+- Interactive prototype: [[Task Harness Workflow Kit/workflow-builder.html|workflow-builder.html]]
 - Worked example: [[Task Harness Workflow Kit/Worked Example - X Artifact Factory Frequent Improver]]
 - Skill draft: [[task-harness-workflow-kit/SKILL]]
 - Improvement loop: [[Task Harness Workflow Kit Loop]]
@@ -41,9 +42,10 @@ https://github.com/vinayclawagent-art/task-harness-workflow-kit
 
 ## Improvement backlog
 - Add one worked example from an active VinClawLabs project. ✅ Done with [[Task Harness Workflow Kit/Worked Example - X Artifact Factory Frequent Improver]].
-- Convert the markdown prototype into a small interactive HTML checklist if usage repeats.
+- Convert the markdown prototype into a small interactive HTML checklist if usage repeats. ✅ Done with `workflow-builder.html`.
 - Decide whether to merge the skill draft into an existing skill or promote it.
 
 ## Change log
 - 2026-06-04: Created nightly package, prototype, skill draft, loop, and GitHub repo sync.
 - 2026-06-04: Added the frequent-improver worked example and moved the first backlog item to done.
+- 2026-06-04: Added a browser-based workflow builder that turns recurring agent tasks into copyable `workflow.md` harnesses.
