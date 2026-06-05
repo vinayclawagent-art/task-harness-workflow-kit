@@ -5,10 +5,11 @@ Open `workflow-template.md` as the reusable harness skeleton. For a guided fill-
 ## Worked examples
 
 - [[Worked Example - X Artifact Factory Frequent Improver]] — applies the harness shape to this cron-safe artifact improvement job, including trigger, loaded context, allowed tools, steps, output contract, and verification checklist.
+- [[Generated Workflow - Mission Control Release Notes QA]] — archives the first builder-generated `workflow.md` shape for a recurring VinClawLabs release-note QA pass, including readiness scoring and trial checklist.
 
 ## Next iteration
 
-Use the interactive builder on the next recurring agent task, then compare the generated output contract against the markdown template.
+Use the generated release-notes QA workflow on the next Mission Control release candidate, then compare the handoff quality against the markdown template.
 
 ## What it demonstrates
 A lightweight workflow.md template for turning recurring agent tasks into repeatable harnesses before promoting them into full Hermes skills.
@@ -17,6 +18,6 @@ A lightweight workflow.md template for turning recurring agent tasks into repeat
 Open `workflow-builder.html`, fill the required fields until the readiness bar says the harness is ready for trial, then copy the generated markdown into the target project. Use `workflow-template.md` when a plain text-only version is preferred.
 
 ## Next iteration ideas
-- Run the builder on one real recurring VinClawLabs workflow and archive the generated `workflow.md`.
+- Run [[Generated Workflow - Mission Control Release Notes QA]] during the next real release candidate and attach its traceability table to the release PR or package note.
 - Add downloadable markdown export if browser copy/paste proves too fragile.
-- Link one completed example back into the package note.
+- Link one completed release QA run back into the package note.
