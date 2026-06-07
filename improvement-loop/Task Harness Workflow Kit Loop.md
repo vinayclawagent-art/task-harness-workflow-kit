@@ -4,8 +4,8 @@ status: active
 package: "[[Task Harness Workflow Kit]]"
 github_repo: "https://github.com/vinayclawagent-art/task-harness-workflow-kit"
 cadence: nightly
-last_improved: 2026-06-06
-next_focus: fill the release-candidate trial packet during the next Mission Control release candidate, then attach its traceability and promotion decision blocks to the release handoff
+last_improved: 2026-06-07
+next_focus: Use the kickoff card before the next release-candidate QA pass to pin scope, source docs, claims, and handoff owner before filling the trial packet.
 tags: [improvement-loop, x-artifact-factory, agent-workflows]
 ---
 
@@ -23,6 +23,8 @@ Turn [[Claude Code Workflows as Task Harnesses]] into a reusable, inspectable ar
 - 2026-06-06: Added [[../Prototypes/Task Harness Workflow Kit/Harness Promotion Decision Card]] so the first release-candidate trial produces a promote / iterate once / retire decision.
 - 2026-06-06: Added [[../Prototypes/Task Harness Workflow Kit/Release Candidate Trial Packet]] to sequence the generated workflow, traceability table, decision card, and copyable release handoff for the next real trial.
 
+- 2026-06-07: Added [[../Prototypes/Task Harness Workflow Kit/Release Candidate Trial Kickoff Card]] so the next real trial starts with scope, guardrails, evidence expectations, and a no-fabrication handoff prompt.
+
 ## Next focus
-- Fill [[../Prototypes/Task Harness Workflow Kit/Release Candidate Trial Packet]] during the next release-candidate QA run; it links the generated workflow, traceability table, and promotion card without claiming validation is complete.
-- If the release-notes QA workflow gets reused, promote or merge the skill draft.
+- Use the kickoff card before the next release-candidate QA pass to pin scope, source docs, claims, and handoff owner before filling the trial packet.
+- Keep the card blank until a real trial fills actual outputs.

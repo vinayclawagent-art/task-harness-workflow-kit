@@ -7,7 +7,7 @@ github_repo: "https://github.com/vinayclawagent-art/task-harness-workflow-kit"
 score: 8
 artifact_tracks: [prototype, skill]
 improvement_cadence: nightly
-last_improved: 2026-06-06
+last_improved: 2026-06-07
 tags: [artifact-package, x-intel, agent-workflows]
 ---
 
@@ -31,6 +31,8 @@ Claude Code workflows reinforce that repeatable tasks need executable harnesses:
 - Trial packet: [[Task Harness Workflow Kit/Release Candidate Trial Packet]]
 - Skill draft: [[task-harness-workflow-kit/SKILL]]
 - Improvement loop: [[Task Harness Workflow Kit Loop]]
+
+- Kickoff card: [[Task Harness Workflow Kit/Release Candidate Trial Kickoff Card]]
 
 ## Prototype brief
 A lightweight workflow.md template for turning recurring agent tasks into repeatable harnesses before promoting them into full Hermes skills.
@@ -61,3 +63,4 @@ https://github.com/vinayclawagent-art/task-harness-workflow-kit
 - 2026-06-05: Added [[Task Harness Workflow Kit/Release Notes QA Traceability Table Template]] so the next release candidate has a ready claim-to-evidence handoff table.
 - 2026-06-06: Added [[Task Harness Workflow Kit/Harness Promotion Decision Card]] so the next release-notes QA trial ends with a promote / iterate once / retire decision.
 - 2026-06-06: Added [[Task Harness Workflow Kit/Release Candidate Trial Packet]] to bundle the next release-candidate proof run into workflow, traceability, decision, and handoff steps without inventing validation evidence.
+- 2026-06-07: Added [[Task Harness Workflow Kit/Release Candidate Trial Kickoff Card]] as the pre-trial scope/guardrail card for the next real-world run.
