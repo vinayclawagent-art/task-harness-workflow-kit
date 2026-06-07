@@ -5,7 +5,7 @@ package: "[[Task Harness Workflow Kit]]"
 github_repo: "https://github.com/vinayclawagent-art/task-harness-workflow-kit"
 cadence: nightly
 last_improved: 2026-06-06
-next_focus: fill the release-notes QA traceability table and harness promotion decision card during the next Mission Control release candidate, then attach both to the release handoff
+next_focus: fill the release-candidate trial packet during the next Mission Control release candidate, then attach its traceability and promotion decision blocks to the release handoff
 tags: [improvement-loop, x-artifact-factory, agent-workflows]
 ---
 
@@ -21,7 +21,8 @@ Turn [[Claude Code Workflows as Task Harnesses]] into a reusable, inspectable ar
 - 2026-06-05: Archived [[../Prototypes/Task Harness Workflow Kit/Generated Workflow - Mission Control Release Notes QA]] as the first builder-generated workflow for a recurring VinClawLabs release-note QA pass.
 - 2026-06-05: Added [[../Prototypes/Task Harness Workflow Kit/Release Notes QA Traceability Table Template]] so the first real release-candidate pass has a ready claim-to-evidence handoff artifact.
 - 2026-06-06: Added [[../Prototypes/Task Harness Workflow Kit/Harness Promotion Decision Card]] so the first release-candidate trial produces a promote / iterate once / retire decision.
+- 2026-06-06: Added [[../Prototypes/Task Harness Workflow Kit/Release Candidate Trial Packet]] to sequence the generated workflow, traceability table, decision card, and copyable release handoff for the next real trial.
 
 ## Next focus
-- Use [[../Prototypes/Task Harness Workflow Kit/Generated Workflow - Mission Control Release Notes QA]] on the next release candidate, fill [[../Prototypes/Task Harness Workflow Kit/Release Notes QA Traceability Table Template]], then complete [[../Prototypes/Task Harness Workflow Kit/Harness Promotion Decision Card]].
+- Fill [[../Prototypes/Task Harness Workflow Kit/Release Candidate Trial Packet]] during the next release-candidate QA run; it links the generated workflow, traceability table, and promotion card without claiming validation is complete.
 - If the release-notes QA workflow gets reused, promote or merge the skill draft.

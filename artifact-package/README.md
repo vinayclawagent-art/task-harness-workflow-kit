@@ -28,6 +28,7 @@ Claude Code workflows reinforce that repeatable tasks need executable harnesses:
 - Generated workflow: [[Task Harness Workflow Kit/Generated Workflow - Mission Control Release Notes QA]]
 - Traceability template: [[Task Harness Workflow Kit/Release Notes QA Traceability Table Template]]
 - Decision card: [[Task Harness Workflow Kit/Harness Promotion Decision Card]]
+- Trial packet: [[Task Harness Workflow Kit/Release Candidate Trial Packet]]
 - Skill draft: [[task-harness-workflow-kit/SKILL]]
 - Improvement loop: [[Task Harness Workflow Kit Loop]]
 
@@ -49,6 +50,7 @@ https://github.com/vinayclawagent-art/task-harness-workflow-kit
 - Use `workflow-builder.html` on one real recurring VinClawLabs workflow and archive the generated `workflow.md`. ✅ Done with [[Task Harness Workflow Kit/Generated Workflow - Mission Control Release Notes QA]].
 - Add a fillable traceability table for the first release-notes QA trial. ✅ Done with [[Task Harness Workflow Kit/Release Notes QA Traceability Table Template]].
 - Add a promotion decision card for the first release-notes QA trial. ✅ Done with [[Task Harness Workflow Kit/Harness Promotion Decision Card]].
+- Add a single release-candidate trial packet that sequences workflow, traceability, decision, and handoff fields. ✅ Done with [[Task Harness Workflow Kit/Release Candidate Trial Packet]].
 - Decide whether to merge the skill draft into an existing skill or promote it after the release-notes QA workflow is used in a real release.
 
 ## Change log
@@ -58,3 +60,4 @@ https://github.com/vinayclawagent-art/task-harness-workflow-kit
 - 2026-06-05: Archived [[Task Harness Workflow Kit/Generated Workflow - Mission Control Release Notes QA]] as the first builder-generated workflow for a recurring VinClawLabs release QA pass.
 - 2026-06-05: Added [[Task Harness Workflow Kit/Release Notes QA Traceability Table Template]] so the next release candidate has a ready claim-to-evidence handoff table.
 - 2026-06-06: Added [[Task Harness Workflow Kit/Harness Promotion Decision Card]] so the next release-notes QA trial ends with a promote / iterate once / retire decision.
+- 2026-06-06: Added [[Task Harness Workflow Kit/Release Candidate Trial Packet]] to bundle the next release-candidate proof run into workflow, traceability, decision, and handoff steps without inventing validation evidence.
