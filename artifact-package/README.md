@@ -7,7 +7,7 @@ github_repo: "https://github.com/vinayclawagent-art/task-harness-workflow-kit"
 score: 8
 artifact_tracks: [prototype, skill]
 improvement_cadence: nightly
-last_improved: 2026-06-07
+last_improved: 2026-06-08
 tags: [artifact-package, x-intel, agent-workflows]
 ---
 
@@ -29,6 +29,7 @@ Claude Code workflows reinforce that repeatable tasks need executable harnesses:
 - Traceability template: [[Task Harness Workflow Kit/Release Notes QA Traceability Table Template]]
 - Decision card: [[Task Harness Workflow Kit/Harness Promotion Decision Card]]
 - Trial packet: [[Task Harness Workflow Kit/Release Candidate Trial Packet]]
+- Evidence intake card: [[Task Harness Workflow Kit/Release Candidate Evidence Intake Card]]
 - Skill draft: [[task-harness-workflow-kit/SKILL]]
 - Improvement loop: [[Task Harness Workflow Kit Loop]]
 
@@ -53,6 +54,7 @@ https://github.com/vinayclawagent-art/task-harness-workflow-kit
 - Add a fillable traceability table for the first release-notes QA trial. ✅ Done with [[Task Harness Workflow Kit/Release Notes QA Traceability Table Template]].
 - Add a promotion decision card for the first release-notes QA trial. ✅ Done with [[Task Harness Workflow Kit/Harness Promotion Decision Card]].
 - Add a single release-candidate trial packet that sequences workflow, traceability, decision, and handoff fields. ✅ Done with [[Task Harness Workflow Kit/Release Candidate Trial Packet]].
+- Add a pre-packet evidence intake card so the live release-candidate pass captures source links and blockers before validation writeup. ✅ Done with [[Task Harness Workflow Kit/Release Candidate Evidence Intake Card]].
 - Decide whether to merge the skill draft into an existing skill or promote it after the release-notes QA workflow is used in a real release.
 
 ## Change log
@@ -64,3 +66,4 @@ https://github.com/vinayclawagent-art/task-harness-workflow-kit
 - 2026-06-06: Added [[Task Harness Workflow Kit/Harness Promotion Decision Card]] so the next release-notes QA trial ends with a promote / iterate once / retire decision.
 - 2026-06-06: Added [[Task Harness Workflow Kit/Release Candidate Trial Packet]] to bundle the next release-candidate proof run into workflow, traceability, decision, and handoff steps without inventing validation evidence.
 - 2026-06-07: Added [[Task Harness Workflow Kit/Release Candidate Trial Kickoff Card]] as the pre-trial scope/guardrail card for the next real-world run.
+- 2026-06-08: Added [[Task Harness Workflow Kit/Release Candidate Evidence Intake Card]] so the next real release-candidate QA pass has a source-link and blocker ledger before the trial packet is filled.
