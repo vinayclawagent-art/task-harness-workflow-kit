@@ -4,8 +4,8 @@ status: active
 package: "[[Task Harness Workflow Kit]]"
 github_repo: "https://github.com/vinayclawagent-art/task-harness-workflow-kit"
 cadence: nightly
-last_improved: 2026-06-08
-next_focus: Use the kickoff card, then fill [[Release Candidate Evidence Intake Card]] during the next release-candidate QA pass before copying source-backed claims into the trial packet.
+last_improved: 2026-06-11
+next_focus: Use the kickoff card, fill the evidence intake card and trial packet during the next release-candidate QA pass, then complete the Release Candidate Post-Trial Debrief Template before patching README, workflow-builder, skill-draft, or release handoff wording.
 tags: [improvement-loop, x-artifact-factory, agent-workflows]
 ---
 
@@ -25,7 +25,8 @@ Turn [[Claude Code Workflows as Task Harnesses]] into a reusable, inspectable ar
 
 - 2026-06-07: Added [[../Prototypes/Task Harness Workflow Kit/Release Candidate Trial Kickoff Card]] so the next real trial starts with scope, guardrails, evidence expectations, and a no-fabrication handoff prompt.
 - 2026-06-08: Added [[../Prototypes/Task Harness Workflow Kit/Release Candidate Evidence Intake Card]] to capture source links, verification checks, blockers, and handoff owner before the release trial packet is filled.
+- 2026-06-11: Added [[../Prototypes/Task Harness Workflow Kit/Release Candidate Post-Trial Debrief Template]] to turn the next real release-candidate QA trial into evidence-backed patch decisions. Template-ready only; no validation proof claimed.
 
 ## Next focus
-- Use the kickoff card, then fill [[../Prototypes/Task Harness Workflow Kit/Release Candidate Evidence Intake Card]] during the next release-candidate QA pass before copying source-backed claims into the trial packet.
+- Use the kickoff card, fill [[../Prototypes/Task Harness Workflow Kit/Release Candidate Evidence Intake Card]] and [[../Prototypes/Task Harness Workflow Kit/Release Candidate Trial Packet]], then complete [[../Prototypes/Task Harness Workflow Kit/Release Candidate Post-Trial Debrief Template]] before patching README, workflow-builder, skill-draft, or release handoff wording.
 - Keep the card blank until a real trial fills actual outputs.
